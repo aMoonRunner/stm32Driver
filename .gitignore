@@ -1,4 +1,5 @@
 visual_studio_testPro/x64/Debug/
+visual_studio_testPro/Debug/
 *.pdb
 *.idb
 *.obj
@@ -21,3 +22,5 @@ simulink_test_filter/slprj/
 *.mexw64
 *.exe
 
+cubeIDE_gen_lib/
+visual_studio_testPro/

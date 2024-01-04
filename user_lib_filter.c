@@ -4,12 +4,10 @@
 // 文件内部公用变量和函数====================================================================================================================
 // 仅内部使用，用static修饰
 static const float PI = 3.14159265f;
-static const int32_t PREPARED = 1;
-static const int32_t NOT_PREPARED = 0;
 
 static inline float USER_LIB_FILTER_float_abs(float x)
 {
-    float temp = 0;
+    float temp = 0.0f;
     if (x < 0.0f)
     {
         temp = -x;
@@ -56,13 +54,6 @@ inline float USER_LIB_FILTER_void_amplitudeLimitFilter_calcu(float value, amplit
 
 // 一阶低通滤波器====================================================================================================================
 FirstOrderLowpssFilter_STR test_firstOrderLowpssFilter_str = {0};
-/**
- * @description: 一阶低通滤波器，结构体初始化
- * @param {FirstOrderLowpssFilter_STR} *str 结构体
- * @param {float} fc 截止频率
- * @param {float} Ts 采样时间
- * @return {*} 无返回值
- */
 inline void USER_LIB_FILTER_void_firstOrderLowpssFilter_init(FirstOrderLowpssFilter_STR *str, float fc, float Ts)
 {
     str->fc = fc;
@@ -73,12 +64,6 @@ inline void USER_LIB_FILTER_void_firstOrderLowpssFilter_init(FirstOrderLowpssFil
     str->previousValue = 0.0f;
     str->valueFliterd = 0.0f;
 }
-/**
- * @description: 一阶低通滤波器
- * @param {float} value 需要滤波的数
- * @param {FirstOrderLowpssFilter_STR} *str 滤波器对应的结构体
- * @return {float} 滤波后的数
- */
 inline float USER_LIB_FILTER_float_firstOrderLowpssFilter_calcu(float value, FirstOrderLowpssFilter_STR *str)
 {
     str->valueFliterd = str->alpha * value + (1.0f - str->alpha) * str->previousValue;
@@ -112,7 +97,7 @@ inline void USER_LIB_FILTER_void_notchFilter_init(notchFilter_STR *str, float Q,
 
     str->Ts = Ts;
     str->fc = fc;
-    str->wc = 2 * 3.1415926535897932384626 * fc;
+    str->wc = 2.0f * 3.1415926535897932384626f * fc;
     str->Q = Q;
 
     str->b0 = 4.0f + str->wc * str->wc * str->Ts * str->Ts;
