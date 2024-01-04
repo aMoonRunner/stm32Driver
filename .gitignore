@@ -1,4 +1,3 @@
-
 *.pdb
 *.idb
 *.obj
@@ -12,7 +11,8 @@
 *.vcxproj
 *.sln
 *.vsidx
-testPro/.vs/testPro/v17/.suo
+*.suo
 *.db
 *.ipch
-testPro/x64/Debug/testPro.vcxproj.FileListAbsolute.txt
+simulink_test_filter/slprj/
+
