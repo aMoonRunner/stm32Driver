@@ -1,1 +1,18 @@
 
+*.pdb
+*.idb
+*.obj
+*.lastbuildstate
+*.tlog
+*.log
+*.ilk
+*.recipe
+*.user
+*.filters
+*.vcxproj
+*.sln
+*.vsidx
+testPro/.vs/testPro/v17/.suo
+*.db
+*.ipch
+testPro/x64/Debug/testPro.vcxproj.FileListAbsolute.txt

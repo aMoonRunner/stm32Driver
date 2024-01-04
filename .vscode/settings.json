@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "spll_1ph_sogi.h": "c"
+        "spll_1ph_sogi.h": "c",
+        "user_lib_math.h": "c"
     }
 }
