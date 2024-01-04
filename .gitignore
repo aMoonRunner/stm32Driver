@@ -1,3 +1,4 @@
+visual_studio_testPro/x64/Debug/
 *.pdb
 *.idb
 *.obj
@@ -14,5 +15,9 @@
 *.suo
 *.db
 *.ipch
+
 simulink_test_filter/slprj/
+*.slxc
+*.mexw64
+*.exe
 
