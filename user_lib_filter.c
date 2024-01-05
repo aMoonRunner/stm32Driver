@@ -58,7 +58,7 @@ inline void USER_LIB_FILTER_void_firstOrderLowpssFilter_init(FirstOrderLowpssFil
 {
     str->fc = fc;
     str->Ts = Ts;
-    float temp = 0;
+    float temp = 0.0f;
     temp = 2.0f * PI * fc * Ts;
     str->alpha = temp / (1.0f + temp);
     str->previousValue = 0.0f;
